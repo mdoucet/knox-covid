@@ -5,19 +5,8 @@ import urllib.request
 from datetime import datetime
 
 from matplotlib import pyplot as plt
-from matplotlib.dates import date2num, num2date
-from matplotlib import dates as mdates
-from matplotlib import ticker
-from matplotlib.colors import ListedColormap
-from matplotlib.patches import Patch
-
-%matplotlib notebook
-
-
 from scipy import stats as sps
-from scipy.interpolate import interp1d
 
-%config InlineBackend.figure_format = 'retina'
 
 knox_data_url = 'https://covid.knoxcountytn.gov/js/covid-charts.js'
 
@@ -181,9 +170,6 @@ n_days=60
 
 fig, ax = plt.subplots()
 plt.plot(day_processed[-n_days:],np.asarray(result['ML'])[-n_days:])
-
-
-
 ax.fill_between(day_processed[-n_days:], np.asarray(result['Low_67'])[-n_days:], 
                 np.asarray(result['High_67'])[-n_days:], 
                 color='k', alpha=0.1, lw=0,
