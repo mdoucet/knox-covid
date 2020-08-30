@@ -37,3 +37,12 @@ jobs:
         with:
           name: knox_cases.png
           path: knox_cases.png
+      - name: push changes
+        run: |
+          git config --global user.name "automated push"
+          git config --global user.email "automated-github-actions@users.noreply.github.com"
+
+          git add knox_r_0.png
+          git add knox_cases.png
+          git commit -m "update images"
+          git push
