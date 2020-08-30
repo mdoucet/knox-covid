@@ -15,6 +15,9 @@ jobs:
   compile:
     name: Compile COVID data
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
