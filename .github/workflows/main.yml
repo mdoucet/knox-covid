@@ -15,7 +15,7 @@ jobs:
     name: Compile COVID data
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - uses: actions/setup-python@v1
         with:
           python-version: 3.8
@@ -39,7 +39,6 @@ jobs:
           path: knox_cases.png
       - name: push changes
         run: |
-          git checkout master
           git config --global user.name "mdoucet"
           git config --global user.email "mdoucet@users.noreply.github.com"
 
