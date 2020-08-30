@@ -16,6 +16,7 @@ jobs:
     name: Compile COVID data
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - shell: bash
         run: |
           python r_0_calculator.py
