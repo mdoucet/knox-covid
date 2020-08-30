@@ -5,6 +5,8 @@ The bayesian method used is described in this paper: https://journals.plos.org/p
 
 The data is extracted from https://covid.knoxcountytn.gov/case-count.html
 
+These figures are set up to refresh every day at 11:05 am.
+
 ![Knox cases](knox_cases.png)
 
 ![Knox cases](knox_r_0.png)
