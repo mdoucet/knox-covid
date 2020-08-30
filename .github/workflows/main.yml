@@ -33,3 +33,8 @@ jobs:
         with:
           name: knox_r_0.png
           path: knox_r_0.png
+      - name: Upload cases
+        uses: actions/upload-artifact@v2
+        with:
+          name: knox_cases.png
+          path: knox_cases.png
