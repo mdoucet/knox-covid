@@ -27,16 +27,16 @@ jobs:
       - shell: bash
         run: |
           python r_0_calculator.py
-      - name: Upload R_0 results
-        uses: actions/upload-artifact@v2
-        with:
-          name: knox_r_0.png
-          path: knox_r_0.png
-      - name: Upload cases
-        uses: actions/upload-artifact@v2
-        with:
-          name: knox_cases.png
-          path: knox_cases.png
+      #- name: Upload R_0 results
+      #  uses: actions/upload-artifact@v2
+      #  with:
+      #    name: knox_r_0.png
+      #    path: knox_r_0.png
+      #- name: Upload cases
+      #  uses: actions/upload-artifact@v2
+      #  with:
+      #    name: knox_cases.png
+      #    path: knox_cases.png
       - name: push changes
         run: |
           git config --global user.name "mdoucet"
