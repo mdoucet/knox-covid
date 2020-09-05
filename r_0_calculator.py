@@ -14,7 +14,7 @@ original, smoothed, day_processed = r_0.prepare_cases(pd.Series(new_cases), day_
 
 # Make plot for news cases per day
 plt.figure()
-plt.plot(day_processed, original, '-', alpha=0.5, label='new cases')
+plt.step(day_processed, original, '-', alpha=0.5, label='new cases')
 plt.plot(day_processed, smoothed, '-', label='7-day average')
 plt.legend()
 
