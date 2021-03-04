@@ -36,6 +36,7 @@ def get_data():
             date_array = line.replace("'", '').replace("];", '').split(',')[1:]
             jan01 = datetime(2020, 1, 1)
             for d in date_array:
+                if d.startswith('*'): d = d[1:]
                 _date = datetime.strptime(d.strip(), "%m/%d/%Y")
                 _day_number = _date - jan01
                 day_number.append(_day_number.days)
